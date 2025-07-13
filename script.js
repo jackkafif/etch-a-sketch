@@ -1,3 +1,11 @@
+function addButtonListener(squareDiv) {
+    squareDiv.addEventListener("mouseover", (event) => {
+        // console.log(event);
+        const square = event.target;
+        square.classList.toggle("active");
+    })
+}
+
 const container = document.querySelector("#container")
 for (let row = 0; row <= 15; row++) {
     const rowDiv = document.createElement("div");
@@ -10,4 +18,5 @@ for (let row = 0; row <= 15; row++) {
         rowDiv.appendChild(square);
     }
     container.appendChild(rowDiv);
+    addButtonListener(rowDiv);
 }
