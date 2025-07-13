@@ -12,10 +12,15 @@ body {
     gap: 30px;
 }
 
-div#container {
+div#container, div#initial {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+button {
+    align-self: center;
 }
 
 div.row {
